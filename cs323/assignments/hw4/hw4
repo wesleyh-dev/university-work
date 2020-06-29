@@ -1,0 +1,34 @@
+﻿HW4
+
+Shortest Path 1: 'Xbox_360' (4590) to 'Foxxy_Cleopatra' (18):
+Xbox_360 -> May_25 -> Mike_Myers_(actor) -> Foxxy_Cleopatra
+
+Shortest Path 2: 'Psychokinesis' (2809) to 'Prostitution' (2801):
+Psychokinesis -> Stephen_King -> Times_Square -> Prostitution
+
+Shortest Path 3: 'Modest_Mouse' (1946) to 'Mogadishu' (1947):
+Modest_Mouse -> Wikiquote -> July_2007 -> Mogadishu
+
+Shortest Path 4: 'Microsoft' (1877) to 'Lady_Bird_Johnson' (1233):
+Microsoft -> Xbox_360 -> July_11 -> Lady_Bird_Johnson
+
+Shortest Path 5: 'Hypocrisy' (534) to 'IPhone' (550):
+Hypocrisy -> Islam -> January_9 -> IPhone
+
+Shortest Path 6: 'Ice_Cube' (563) to 'French_law_on_secularity_and_conspicuous_religious_symbols_in_schools' (60):
+Ice_Cube -> Paul_Oakenfold -> United_States -> Republic -> French_law_on_secularity_and_conspicuous_religious_symbols_in_schools
+
+Shortest Path 7: 'Gospel_music' (219) to 'Forest_Whitaker' (2):
+Gospel_music -> Music -> George_Gershwin -> Harry_Connick,_Jr. -> Forest_Whitaker
+
+Shortest Path 8: 'Harry_Potter' (356) to 'The_Weather_Lady' (4002):
+Harry_Potter -> Steven_Spielberg -> Who_Framed_Roger_Rabbit -> The_Adventures_of_Rocky_and_Bullwinkle -> The_Weather_Lady
+
+Shortest Path 9: 'Taliban' (3700) to 'Menstruation' (1826):
+Taliban -> January_20 -> January_2005 -> Menstruation
+
+Shortest Path 10: 'Nintendo_DS' (2202) to 'Judaism' (967):
+Nintendo_DS -> June_21 -> France -> Judaism
+
+
+After populating the graph with all the vertices and their links to other vertices corresponding to links to other wiki pages, each path was generated using Dijkstra’s algorithm. While populating the graph each vertex link was mapped to a wiki title. Then, for each path, corresponding to a pair of wiki pages of my choosing, a simple StringBuilder was used to visualize each path, and the paths were followed by taking the previous node starting at the source node. As each vertex was visited in visualizing the path, the mapping of the links to their  corresponding wiki title was used to print the path as shown above.
