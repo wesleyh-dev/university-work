@@ -1,0 +1,11 @@
+main: primes.o 
+	gcc -o main main.o primes.o
+
+
+
+primes.o: primes.c header.h
+	gcc -c primes.c 
+
+
+
+

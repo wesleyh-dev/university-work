@@ -1,0 +1,183 @@
+Math 315: Eco Bottle Design
+Last week, we determined that the minimal the amount of material needed to create a bottle that
+holds 6.5 ounces of liquid would be the bottom half of a sphere (see pictures below). Use this
+information and the MATLAB program you wrote last week to calculate Surface Area, to redesign
+your bottle so that it uses less plastic.
+4.5
+
+4
+4
+3.5
+
+3.5
+3
+
+3
+
+2.5
+2
+
+2.5
+
+1.5
+1
+
+2
+
+0.5
+1.5
+
+0
+4
+
+1
+
+2
+0
+
+0.5
+
+-2
+-4
+4
+
+3
+
+2
+
+1
+
+0
+
+-1
+
+-2
+
+-3
+
+0
+
+-4
+
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+3.5
+
+4
+
+4.5
+
+5
+
+To redesign you bottle, please follow the following steps.
+Step 1: Make sure your bottle has an open top and close bottom. Plot your bottle. Make
+sure the contour of your bottle starts at (0, 0) but does not finish touching the y-axis.
+Step 2: Make sure your bottle holds 6.5 oz (or 192.228 mL). If your bottle does not have this
+volume, please run the following code:
+[xvals,yvals,V] = ParSpline(x,y,2000);
+s_vol = abs(V)/192.228;
+y = 1/(s_vol)^(1/3)*y;
+x = 1/(s_vol)^(1/3)*x;
+Step 3: Calculate the surface area of your original bottle, using
+[xvals, yvals, A] = SurfaceArea(x,y,2000)
+Write the value of A here:
+
+Step 4: Resign your bottle to use less plastic. Incorporate the minimal surface into your
+design. Keep in mind, you will want to keep key features of your original design but use
+less plastic. Some values along the minimal contour are given below.
+x_min = ...
+[0
+0.7822
+y_min = ...
+[ 0
+0.0679
+
+1.5409
+
+2.2535
+
+2.8986
+
+3.4568
+
+3.9115
+
+4.2490
+
+4.4592
+
+4.5358];
+
+0.2697
+
+0.5994
+
+1.0469
+
+1.5990
+
+2.2390
+
+2.9479
+
+3.7044
+
+4.4858];
+
+. Be sure to check that the
+
+Write the NEW value of A here:
+volume is still approximately 192.2.
+1
+
+What to Turn In - How and When.
+Redesign:
+
+Due: December 2 by 5:00 PM
+
+Send an email to Prof. Ettinger at betting ’at’ emory.edu with:
+Subject: Math 315 Bottle - Student Name1, Student Name 2
+Body:
+(1) Bottle Design Details
+Original Verticies
+x = [ Fill in your original vertices ];
+y = [ Fill in your original vertices ];
+Vertices Scaled for a volume of about 192.2 mL/6.5 oz.
+x_s = [ Fill in your scaled vertices ];
+y_s = [ Fill in your scaled vertices ];
+Eco Redesign Vertices
+x_eco = [ Fill in your redesigned vertices ];
+y_eco = [ Fill in your redesigned vertices ];
+By redesigning my bottle I reduced the surface area from [FILL IN SCALED
+ORIGINAL AREA] cm2 to [FILL IN NEW REDESIGNED AREA] cm2 .
+(2) Display Card Write-Up
+Prepare a short statement (100 words) to be displayed with your bottles that
+describes the inspiration for your designs as well as the key features you decided
+to keep in your redesign. Be sure to include the amount of materials needed for
+the original design as well as the amount you saved in the redesign.
+
+Reflection Paper:
+
+Due: December 13 by 5:00 PM
+
+Write a reflection on the project. Some questions you may address are: What where
+some of the challenges of the bottle design project? What did you learn about the roles
+mathematics and scientific computing play in design? What is the feasibility of optimal design and how does it limit (or expand) ones creativity? Are 3D computer models sufficient
+or is there an added benefit to generating a tangible version of your bottle via the 3D printer?
+Papers should be 2 to 3 pages, single spaced with 12 point font and 1.25” margins. Every
+student must turn in their own paper, even if they worked in a pair. This assignment will
+open on December 2 and will be turned in on Gradescope.
+
+

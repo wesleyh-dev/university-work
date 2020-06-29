@@ -1,0 +1,18 @@
+CFLAGS = -c
+DIR = /home/cs580000/share/hoca/util
+TRAP = ../traps
+
+UTIL = $(DIR)/libutil.a
+EGCC = egcc.sol2
+
+all: nucleus 
+
+int.o: int.c ../../h/const.h ../../h/types.h ../../h/procq.e ../../h/asl.e ../../h/vpop.h
+	$(EGCC) $(CFLAGS) int.c
+
+intp1.o: intp1.c ../../h/const.h ../../h/types.h ../../h/vpop.h
+	$(EGCC) $(CFLAGS) intp1.c
+
+nucleus: $(TRAP)/main.o $(TRAP)/trap.o $(TRAP)/syscall.o int.o ../../queues/procq.o ../../queues/asl.o intp1.o $(UTIL) 
+	$(EGCC) -o nucleus $(TRAP)/main.o  $(TRAP)/trap.o $(TRAP)/syscall.o int.o ../../queues/procq.o ../../queues/asl.o intp1.o $(UTIL)
+

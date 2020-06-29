@@ -1,0 +1,1 @@
+java -cp Egtapi.jar Egtapi localhost 8000 detach

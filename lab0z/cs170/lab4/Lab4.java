@@ -1,0 +1,24 @@
+// Wesley Harmon
+// wharmon
+// 005
+
+public class Lab4{
+	public static double bloitsToMiles(double bloits){
+		return bloits*1.3;
+		//when invoked within the main method, the return value 		will be the equivalent miles converted from given bloits
+	}
+	
+	public static int roll(int roll){
+		int x= (int)(roll*Math.random());
+		//the return value will produce a random number between 0 			and x-1		
+		return x+1;
+		//this adjusts the random returned number to appropriate 			values that are associated with a face of the die
+	}
+	
+	public static void main(String[] args){
+		System.out.println(bloitsToMiles(3));
+		System.out.println(roll(6));
+		System.out.println("done");
+	}
+	
+}

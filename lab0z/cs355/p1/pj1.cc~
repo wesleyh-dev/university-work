@@ -1,0 +1,92 @@
+// THIS CODE IS MY OWN WORK, IT WAS WRITTEN WITHOUT CONSULTING A TUTOR OR CODE WRITTEN BY OTHER STUDENTS - Wesley Harmon
+
+#include "Sim.h"
+
+void simnet()
+{
+	Sig(sw1,1);
+	Sig(sw2,1);
+	Sig(sw3,1);
+	Sig(sw4,1);
+	Sig(sw5,1);
+	Sig(n1,1);
+	Sig(n2,1);
+	Sig(n3,1);
+	Sig(n4,1);
+	Sig(n5,1);
+	Switch("aa",sw1,'1',Zero);
+	Switch("ca",sw2,'2',Zero);
+	Switch("ea",sw3,'3',Zero);
+	Switch("ga",sw4,'4',Zero);
+	Switch("ia",sw5,'5',Zero);
+	Not("ba",sw1,n1);
+	Not("da",sw2,n2);
+	Not("fa",sw3,n3);
+	Not("ha",sw4,n4);
+	Not("ja",sw5,n5);
+	
+	Sig(ax1,1);
+	Sig(ax2,1);
+	Sig(ax3,1);
+	Sig(ax4,1);
+	Sig(ax5,1);
+	Sig(ax6,1);
+	Sig(or1,1);
+	And("ab",(n1,sw2,sw3,sw4,sw5),ax1);
+	And("ab",(sw1,n2,sw3,sw4,sw5),ax2);
+	And("ab",(sw1,sw2,n3,sw4,sw5),ax3);
+	And("ab",(sw1,sw2,sw3,n4,sw5),ax4);
+	And("ab",(sw1,sw2,sw3,sw4,n5),ax5);
+	And("ab",(sw1,sw2,sw3,sw4,sw5),ax6);
+	Or("ac",(ax1,ax2,ax3,ax4,ax5,ax6),or1);
+	Probe("ad",or1);
+
+	Sig(ay1,1);
+	Sig(ay2,1);
+	Sig(ay3,1);
+	Sig(ay4,1);
+	Sig(ay5,1);
+	Sig(ay6,1);
+	Sig(ay7,1);
+	Sig(ay8,1);
+	Sig(ay9,1);
+	Sig(ay10,1);
+	Sig(ay11,1);
+	Sig(ay12,1);
+	Sig(ay13,1);
+	Sig(ay14,1);
+	Sig(ay15,1);
+	Sig(ay16,1);
+	Sig(ay17,1);
+	Sig(ay18,1);
+	Sig(ay19,1);
+	Sig(ay20,1);
+	Sig(or2,1);
+	And("eb",(n1,n2,n3,sw4,sw5),ay1);
+	And("eb",(n1,n2,sw3,n4,sw5),ay2);
+	And("eb",(n1,n2,sw3,sw4,n5),ay3);
+	And("eb",(n1,n2,sw3,sw4,sw5),ay4);
+	And("eb",(n1,sw2,n3,n4,sw5),ay5);
+	And("eb",(n1,sw2,n3,sw4,n5),ay6);
+	And("eb",(n1,sw2,n3,sw4,sw5),ay7);
+	And("eb",(n1,sw2,sw3,n4,n5),ay8);
+	And("eb",(n1,sw2,sw3,n4,sw5),ay9);
+	And("eb",(n1,sw2,sw3,sw4,n5),ay10);
+	And("eb",(sw1,n2,n3,n4,sw5),ay11);
+	And("eb",(sw1,n2,n3,sw4,n5),ay12);
+	And("eb",(sw1,n2,n3,sw4,sw5),ay13);
+	And("eb",(sw1,n2,sw3,n4,n5),ay14);
+	And("eb",(sw1,n2,sw3,n4,sw5),ay15);
+	And("eb",(sw1,n2,sw3,sw4,n5),ay16);
+	And("eb",(sw1,sw2,n3,n4,n5),ay17);
+	And("eb",(sw1,sw2,n3,n4,sw5),ay18);
+	And("eb",(sw1,sw2,n3,sw4,n5),ay19);
+	And("eb",(sw1,sw2,sw3,n4,n5),ay20);
+	Or("ec",(ay1,ay2,ay3,ay4,ay5,ay6,ay7,ay8,ay9,ay10,ay11,ay12,ay13,ay14,ay15,ay16,ay17,ay18,ay19,ay20),or2);
+	Probe("ed",or2);
+
+
+
+
+
+}

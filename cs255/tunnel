@@ -1,0 +1,13 @@
+
+if [[ $# < 2 ]]
+then
+   echo "Usage: tunnel  yourNetID   port#"
+   echo "----------------------------------------------------------"
+   echo "Also, the port# must be the SAME one that you used"
+   echo "when you started m68000-server on Emory"
+   echo "I.e.: You must have started m68000-server BEFORE using tunnel !"
+else
+   echo Opening connection to %1@lab0z.mathcs.emory.edu
+   echo Forwarding localhost:8000 to lab0z.mathcs.emory.edu:%2
+   ssh -X -L 8000:lab0z.mathcs.emory.edu:$2  $1@lab0z.mathcs.emory.edu
+fi

@@ -1,0 +1,9 @@
+
+In this phase you will test the clock and device interrupts.
+The output of the test program will go to the file printer0.
+Please note that your output may not be in the same order
+as printer0.  The processes will get interrupted at different
+locations depending on your nucleus implementation.  Also
+the process that prints cpu and system time will show different
+times.  But if you sort and diff your printer0 and printer0.demo, 
+you should notice minimal differences.

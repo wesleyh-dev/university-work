@@ -1,0 +1,28 @@
+Dump of assembler code for function des:
+   0x0804908c <+0>:	  push   %ebp
+   0x0804908d <+1>:	  mov    %esp,%ebp
+   0x0804908f <+3>:	  sub    $0x18,%esp
+=> 0x08049092 <+6>:	  mov    0x8(%ebp),%eax
+   0x08049095 <+9>:	  cmp    0x804c1e4,%eax
+   0x0804909b <+15>:	jne    0x80490bb <des+47>
+   0x0804909d <+17>:	mov    %eax,0x4(%esp)
+   0x080490a1 <+21>:	movl   $0x804a26c,(%esp)
+   0x080490a8 <+28>:	call   0x80488e0 <printf@plt>
+   0x080490ad <+33>:	movl   $0x1,(%esp)
+   0x080490b4 <+40>:	call   0x8049104 <validate>
+   0x080490b9 <+45>:	jmp    0x80490cb <des+63>
+   0x080490bb <+47>:	mov    %eax,0x4(%esp)
+   0x080490bf <+51>:	movl   $0x804a2b4,(%esp)
+   0x080490c6 <+58>:	call   0x80488e0 <printf@plt>
+   0x080490cb <+63>:	movl   $0x0,(%esp)
+   0x080490d2 <+70>:	call   0x8048990 <exit@plt>
+
+@<des +6>
+0x55683b08 <_reserved+1039112>:	0x55683b18	0x007f47c6	0x009597ac	0x55683b18
+0x55683b18 <_reserved+1039128>:	0x31313131	0x31313131	0x31313131	0x31313131
+0x55683b28 <_reserved+1039144>:	0x31313131	0x31313131	0x31313131	0x31313131
+0x55683b38 <_reserved+1039160>:	0x31313131	0x31313131	0x31313131	0x0804908c
+0x55683b48 <_reserved+1039176>:	0x55683b00	0x00811120	0x55686020	0x00000470
+0x55683b58 <_reserved+1039192>:	0x55685ff0	0x00811120	0x00959960	0x1c9b10c7
+0x55683b68 <_reserved+1039208>:	0x55683b7c	0x00000000	0x55685ff0	0x08048d69
+0x55683b78 <_reserved+1039224>:	0x0804a030	0x000000f4	0x00001fa0	0x00000000
